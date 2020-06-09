@@ -17,11 +17,11 @@ const App = (props) => {
     <div className='' 
     style={{backgroundColor:'',minHeight:'100vh',maxWidth:'100vwx',overflow:'hidden',}}>
 
-      <Navbar color="yellow" light expand="sm" 
-      style={{backgroundColor:'yellow',display:'flex',justifyContent:'between'}} 
+      <Navbar color="light" light expand="sm" 
+      style={{backgroundColor:'',display:'flex',justifyContent:'between'}} 
       className="d-flex justify-content-between" >
         <NavbarBrand  className=' ml-2'
-         style={{color:'grey',fontWeight:'bold',fontSize:'30px',backgroundColor:'black'}}>
+         style={{color:'grey',fontWeight:'bold',fontSize:'30px',backgroundColor:''}}>
            Welcome to Edunomics
            </NavbarBrand>
              
