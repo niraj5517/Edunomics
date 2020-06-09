@@ -16,8 +16,8 @@
   .shyam {
     position: absolute;
     right: 0;
-    margin: 40px !important;
-    margin-right: 50px !important;
+    margin-top:10px !important;
+    /*  margin-right: 50px !important; */
     max-width: 400px !important;
     padding: 16px;
     background-color: white;
@@ -57,4 +57,15 @@
     min-height: 280px;
     background-color: gray;
 
+  }
+
+  .mohan {
+    /* position: absolute; */
+    /* right: 0; */
+    /* margin: 40px !important;*/
+    /* margin-right: 10px ;  */
+    min-width: 200px !important;
+    max-width: 400px !important;
+    padding: 16px;
+    background-color: white;
   }

@@ -35,10 +35,12 @@ class Login extends React.Component {
         <div class="container shyam">
           <div className='d-flex justify-content-between'>
               <h1>Login</h1>
+              <Link to='/signup'>
               <button type="button" className="btn  "
                 style={{borderRadius:'' ,border:'black solid 1px',padding: '1px 25px'}}
                 > SignUp
                 </button>
+                </Link>
           </div>
       
           <label for="text"><b>Name</b></label>

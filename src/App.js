@@ -40,11 +40,11 @@ const App = (props) => {
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem >Profile</DropdownItem>
-        <DropdownItem  onClick={()=>localStorage.removeItem('username')}>
+        <Link to="/login" > <DropdownItem  onClick={()=>localStorage.removeItem('username')}>
 
-        <Link to="/login" > Logout </Link>
+        Logout 
           
-          </DropdownItem>
+          </DropdownItem></Link>
         
       </DropdownMenu>
     </UncontrolledDropdown>

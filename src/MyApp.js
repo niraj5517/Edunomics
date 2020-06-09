@@ -4,6 +4,7 @@ import Home from './Home';
 import App from './App'
 import Sessions from './Sessions';
 import Login from './Login'
+import SignUp from './SignUp';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -24,6 +25,7 @@ const MyApp = (props) => {
      <Router>
          <Switch>
         <Route path='/login' component={Login}  />
+        <Route path='/signup' component={SignUp} />
         <PrivateRoute path='/' component={App} />
         {/* <Route path='/home' component={Home}  />
         <Route path='/sessions' component={Sessions}  /> */}
