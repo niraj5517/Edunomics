@@ -44,10 +44,10 @@ class Login extends React.Component {
           </div>
       
           <label for="text"><b>Name</b></label>
-          <input type="text"  onChange={this.email} placeholder="Enter Name" name="name" required/>
+          <input type="text"  onChange={this.email} placeholder="name is niraj" name="name" required/>
       
           <label for="psw" ><b>Password</b></label>
-          <input type="password" onChange={this.psw}  placeholder="Enter Password" name="psw" required/>
+          <input type="password" onChange={this.psw}  placeholder="password is 1234" name="psw" required/>
           <Link to='/home'>
                     
                     <button  onClick={this.submit} class="btn ram">Login </button>
