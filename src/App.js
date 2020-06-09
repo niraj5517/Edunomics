@@ -92,7 +92,7 @@ const App = (props) => {
        <Route path="/home" component={Home}/>
        <Route path="/sessions" component={Sessions}/>
        <Route path="/downloads" component={Downloads}/>
-       {/* <Route path="/home" component={Home}/> */}
+       <Route path="/" component={Home}/>
      </Switch>
      {/* <Home/> */}
      {/* <Downloads/> */}

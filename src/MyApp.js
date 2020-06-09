@@ -30,7 +30,7 @@ const MyApp = (props) => {
 
          </Switch>
 
-         <Redirect path='/' to='/home'/>
+         {/* <Redirect path='/' to='/home'/> */}
      </Router>
     );
   }
