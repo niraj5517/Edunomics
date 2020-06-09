@@ -1,25 +1,96 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ useState } from 'react';
+import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom'
+import { Nav, NavItem, Navbar,NavLink,NavbarBrand,NavbarText } from 'reactstrap';
+import Home from './Home';
+import Downloads from './Downloads';
+import Sessions from './Sessions';
+import Button from './Button'
+// import { callExpression } from '@babel/types';
 
-function App() {
+const App = (props) => {
+ 
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className='' 
+    style={{backgroundColor:'',minHeight:'100vh',maxWidth:'100vwx',overflow:'hidden',}}>
+
+      <Navbar color="yellow" light expand="sm" 
+      style={{backgroundColor:'yellow',display:'flex',justifyContent:'between'}} 
+      className="d-flex justify-content-between" >
+        <NavbarBrand  className=' ml-2'
+         style={{color:'grey',fontWeight:'bold',fontSize:'30px',backgroundColor:'black'}}>
+           Welcome to Edunomics
+           </NavbarBrand>
+             
+           <Switch>
+           
+           <Route exact path='/sessions' component={Button} />
+
+            </Switch>
+          
+          
+          <NavbarText>
+           
+
+          <button type="button" className="btn px-4 py-2 mr-5 "
+          style={{borderRadius:'18px' ,border:'black solid 1px',}}
+          > My Account
+          </button>
+          </NavbarText>
+      
+      </Navbar>
+      
+     <div className="row">
+
+       <div className="d-flex-block col-sm-3  yellow"
+        style={{backgroundColor:'grey',width:'100%',minHeight:'50vh'}}>
+        
+       <Nav className="" vertical>
+        <NavItem className=' mt-4' >
+          <NavLink ><Link to='/home'><h3 className='font-weight-bold text-white'>Home</h3></Link></NavLink>
+        </NavItem>
+        <NavItem className=' my-3'>
+        <NavLink  ><Link to='/sessions' ><h3 className='font-weight-bold text-white'>Sessions</h3></Link></NavLink>
+        </NavItem>
+        <NavItem className=' my-3'>
+        <NavLink ><Link to='/downloads'><h3 className='font-weight-bold text-white'>Downloads</h3></Link></NavLink>
+        </NavItem>
+        <NavItem className=' my-3'>
+        <NavLink ><h3 className='font-weight-bold text-white'>Settings</h3></NavLink>
+        </NavItem>
+        <NavItem className=' my-3'>
+        <NavLink ><h3 className='font-weight-bold text-white' >About</h3></NavLink>
+        </NavItem>
+      </Nav>
+
+       </div>
+
+       <div className="col-sm-9 mt-0 p-0"  
+       style={{backgroundColor:'',minHeight:'50vh',width:'100%'}}>
+     <Switch>
+       <Route path="/home" component={Home}/>
+       <Route path="/sessions" component={Sessions}/>
+       <Route path="/downloads" component={Downloads}/>
+       {/* <Route path="/home" component={Home}/> */}
+     </Switch>
+     {/* <Home/> */}
+     {/* <Downloads/> */}
+     {/* <Sessions/> */}
+      
+       </div>
+
+
+     </div>
+
     </div>
+    // <div >
+     
+      
+      
+    // </div>
   );
 }
 
