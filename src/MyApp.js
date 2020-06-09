@@ -14,9 +14,9 @@ const MyApp = (props) => {
   
      <Router>
          <Switch>
-        <Route path='/' component={Login}  />
-        {/* <Route path='/home' component={Home}  />
-        <Route path='/sessions' component={Sessions}  /> */}
+        <Route path='/' component={App}  />
+        <Route path='/home' component={Home}  />
+        <Route path='/sessions' component={Sessions}  />
 
          </Switch>
      </Router>
