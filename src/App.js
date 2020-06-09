@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom'
-import { Nav, NavItem, Navbar,NavLink,NavbarBrand,NavbarText } from 'reactstrap';
+import { Nav, NavItem, Navbar,NavLink,NavbarBrand,NavbarText , DropdownToggle, DropdownMenu, DropdownItem,UncontrolledDropdown} from 'reactstrap';
 import Home from './Home';
 import Downloads from './Downloads';
 import Sessions from './Sessions';
@@ -33,12 +33,30 @@ const App = (props) => {
           
           
           <NavbarText>
-           
 
+          <UncontrolledDropdown >
+      <DropdownToggle caret>
+        My Account
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem >Profile</DropdownItem>
+        <DropdownItem  onClick={()=>localStorage.removeItem('username')}>
+
+        <Link to="/login" > Logout </Link>
+          
+          </DropdownItem>
+        
+      </DropdownMenu>
+    </UncontrolledDropdown>
+            
+           
+          {/* <Link to="/login" >
           <button type="button" className="btn px-4 py-2 mr-5 "
+           onClick={()=>localStorage.removeItem('username')}
           style={{borderRadius:'18px' ,border:'black solid 1px',}}
           > My Account
           </button>
+          </Link> */}
           </NavbarText>
       
       </Navbar>
